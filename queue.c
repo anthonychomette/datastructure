@@ -5,21 +5,32 @@
  */
 #include "queue.h"
 
-/****/
-
+/**
+ * @author Anthony
+ * fonction qui initialise le pointeur
+ * @param s Queue
+ */
 void init_queue(Queue *s)
 {
     s->index = -1;
 }
 
-/****/
+/**
+ * fonction qui ajoute les données
+ * @param q Queue
+ * @param value valeur a ajouter
+ */
 void enqueue(Queue *q, float value)
 {
     q->index++;
     q->data[q->index] = value;
 }
-/***/
 
+/**
+ * fonction qui recupere les données
+ * @param q queue
+ * @param value renvoie la valeur au debut de la file 
+ */
 float dequeue(Queue *q)
 {
     float donnee = q->data[0];
@@ -35,9 +46,13 @@ float dequeue(Queue *q)
     return donnee;
 }
 
-/****/
+/**
+ * fonction qui verifie si la file est vide
+ * @param q
+ * @return true si la file est vide
+ */
 
-bool is_queue_empty(Queue *q)
+bool is_queue_empty    (Queue *q)
 {
     if (q->index==-1)
     {
@@ -46,13 +61,19 @@ bool is_queue_empty(Queue *q)
     else return false; 
     
 }
-/***/
-
+/**
+ * 
+ * @param q Queue
+ * @return valeur a l'avant de la file
+ */
 float front(Queue *q) //aka peek
 {
     return q->data[0];
 }
-
+/**
+ * vide la file
+ * @param q Queue
+ */
 void clearQ(Queue *q)
 {
     init_queue(q);

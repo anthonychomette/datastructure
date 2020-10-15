@@ -22,7 +22,7 @@ void push(Stack *s, float value) {
     s->data[s->index] = value;
 }
 /**
- * Fonction suprrime un element si la pile n'est pas vide
+ * Fonction supprime un element si la pile n'est pas vide
  * @param s
  * @return 
  */
@@ -50,7 +50,7 @@ float peek(Stack *s){// aka top or front
     return s->data[s->index];
 } 
 /**
- * Fonction qui duplique les la premiere valeur sur celle du dessous
+ * Fonction qui duplique la premiere valeur sur celle du dessous
  * @param s
  */
 void dup(Stack *s){
@@ -71,7 +71,7 @@ void swap(Stack *s){
     
 }
 /**
- * Fonction 
+ * Fonction qui vide le stack
  * @param s
  */
 void clear(Stack *s){
@@ -79,4 +79,3 @@ void clear(Stack *s){
     init_stack(s);
     
 }
-
